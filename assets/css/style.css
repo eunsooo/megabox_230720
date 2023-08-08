@@ -1,3 +1,103 @@
+/* layout */
+#header {
+  width: 100%;
+  height: 90px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
 
+/* container */
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 1100px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 1100px) {
+  .container {
+    padding: 0 20px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+
+/* header */
+.header {
+  position: relative;
+  box-sizing: border-box;
+  height: 90px;
+}
+.header h1 {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header h1 img {
+  width: 149px;
+  height: 50px;
+}
+.header .link {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-top: 20px;
+}
+.header .link a {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #888;
+}
+.header .link .left a {
+  margin-right: 20px;
+}
+.header .link .right a {
+  margin-left: 20px;
+}
+.header .util {
+  position: relative;
+  background: #888;
+}
+.header .util a {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: #666;
+}
+.header .util .sitemap {
+  left: 0;
+  background: url(../icons/ico-sitemap-white.png) no-repeat center center;
+}
+.header .util .search {
+  left: 42px;
+  background: url(../icons/ico-search-white.png) no-repeat center center;
+}
+.header .util .ticket {
+  right: 42px;
+  background: url(../icons/ico-schedule-white.png) no-repeat center center;
+}
+.header .util .mymega {
+  right: 0;
+  background: url(../icons/ico-mymega-white.png) no-repeat center center;
+}
+.header #gnb .gnb-depth1 {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 15%;
+}
+.header #gnb .gnb-depth1 li a {
+  font-size: 17px;
+  font-weight: 600;
+  color: #FFF;
+}
+.header #gnb .gnb-depth1 li:nth-child(3) {
+  margin-right: 100px;
+}
+.header #gnb .gnb-depth1 li:nth-child(4) {
+  margin-left: 50px;
+}
+.header #gnb .gnb-depth1 .gnb-depth2 {
+  display: none;
+}
 
 /*# sourceMappingURL=style.css.map */

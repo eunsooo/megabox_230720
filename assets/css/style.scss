@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+// mediaquery
+@mixin res-1100px {
+    @media (max-width: 1100px) {
+        @content;
+    }
+}
+@mixin res-768px {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+@mixin res-360px {
+    @media (max-width: 360px) {
+        @content;
+    }
+}
+
+
+/* layout */
+#header {
+    width: 100%;
+    height: 90px;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+}
+
+/* container */
+.container {
+    position: relative;
+    margin: 0 auto;
+    width: 1100px;
+    background-color: rgba($color: #000000, $alpha: 0.1);
+    @include res-1100px {
+        padding: 0 20px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+}
+
+/* header */
+.header {
+    position: relative;
+    box-sizing: border-box;
+    height: 90px;
+    h1 {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        img {
+            width: 149px;
+            height: 50px;
+        }
+    }
+    .link {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+        padding-top: 20px;
+        // background: rgba($color: #000000, $alpha: 0.1);
+        a {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #888;
+        }
+        .left a {
+            margin-right: 20px;
+        }
+        .right a {
+            margin-left: 20px;
+        }
+    }
+    .util {
+        position: relative;
+        background: #888;
+        a {
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            background: #666;
+        }
+        .sitemap {
+            left: 0;
+            background: url(../icons/ico-sitemap-white.png) no-repeat center center;
+        }
+        .search {
+            left: 42px;
+            background: url(../icons/ico-search-white.png) no-repeat center center;
+        }
+        .ticket {
+            right: 42px;
+            background: url(../icons/ico-schedule-white.png) no-repeat center center;
+        }
+        .mymega {
+            right: 0;
+            background: url(../icons/ico-mymega-white.png) no-repeat center center;
+        }
+    }
+    #gnb {
+        // background: #777;
+        .gnb-depth1 {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 15%;
+            li {
+                a {
+                    font-size: 17px;
+                    font-weight: 600;
+                    color: #FFF;
+                }
+                &:nth-child(3) {
+                    margin-right: 100px;
+                }
+                &:nth-child(4) {
+                    margin-left: 50px;
+                }
+            }
+            .gnb-depth2 {
+                display: none;
+            }
+        }
+    }
+}
